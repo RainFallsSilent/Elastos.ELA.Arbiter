@@ -80,7 +80,7 @@ func init() {
 		log.Fatal("Get password error.")
 		os.Exit(1)
 	}
-	c, err := account.Open(sideauxpow.DefaultKeystoreFile, passwd)
+	c, err := account.Open(config.Parameters.WalletPath, passwd)
 	if err != nil || c == nil {
 		log.Fatal("error: open wallet failed, ", err)
 		os.Exit(1)
