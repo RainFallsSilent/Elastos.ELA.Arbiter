@@ -18,7 +18,7 @@ func MonitorSmallCrossTransfer() {
 			resp, err := rpc.CallAndUnmarshal("getsmallcrosstransfertxs", nil,
 				config.Parameters.MainNode.Rpc)
 			if err != nil {
-				log.Errorf("[Small-Transfer] Unable to call GetSmallCrossTransferTxs rpc ")
+				log.Errorf("[Small-Transfer] Unable to call GetSmallCrossTransferTxs rpc err:%v", err)
 				break
 			}
 
